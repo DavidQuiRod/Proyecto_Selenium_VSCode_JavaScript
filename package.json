@@ -20,5 +20,8 @@
   "dependencies": {
     "chromedriver": "^139.0.1",
     "selenium-webdriver": "^4.35.0"
+  },
+  "devDependencies": {
+    "safaridriver": "^1.0.0"
   }
 }

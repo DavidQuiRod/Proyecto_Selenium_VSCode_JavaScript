@@ -13,7 +13,8 @@ async function Scenario2(){
     await actions.move({origin: deslizador, x:215, y:0}).click().perform(); //El origen a mover es sliderBar se mueve 215 milisegundos para llegar al resultado de 95 /*Revisar mas adetalle ese tema de los milisegundos*/
     const valorFinal= await driver.findElement(By.xpath('//*[@id="rangeSuccess"]')).getText();
     console.log(valorFinal);
-    console.log(assert.equal(valorFinal,95,'El slider bar se encuentra con otro numero diferente al 95'));
+    assert.equal(valorFinal,95,'El slider bar se encuentra con otro numero diferente al 95');
+    console.log('Fin de caso de prueba');
     /*
     if(valorFinal==95){
         console.log('El slider bar se encuentra en 95');

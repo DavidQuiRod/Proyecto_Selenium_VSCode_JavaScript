@@ -27,7 +27,8 @@ async function Scenario1() {
     console.log('Se dio clik en el boton');
     //Step 7 Validate whether the same text message is displayed in the right-hand panel under the “Your Message:” section
     const messageFin=await driver.findElement(By.xpath('//*[@id="message"]')).getText();
-    console.log(assert.equal(messageFin,messageWelcome,'Revisar las cadenas de texto ya que no son iguales'))
+    assert.equal(messageFin,messageWelcome,'Revisar las cadenas de texto ya que no son iguales');
+    console.log('Fin de caso de prueba');
     /*
     console.log('Mensaje obtenido: '+ messageFin); 
     if(messageFin ==messageWelcome){
