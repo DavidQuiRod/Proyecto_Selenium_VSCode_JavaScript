@@ -19,6 +19,7 @@
   "description": "",
   "dependencies": {
     "chromedriver": "^139.0.1",
+    "geckodriver": "^5.0.0",
     "selenium-webdriver": "^4.35.0"
   },
   "devDependencies": {
