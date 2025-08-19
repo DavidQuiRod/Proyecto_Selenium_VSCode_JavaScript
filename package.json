@@ -1,0 +1,24 @@
+{
+  "name": "proyecto_selenium_vscode_javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidQuiRod/Proyecto_Selenium_VSCode_JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidQuiRod/Proyecto_Selenium_VSCode_JavaScript/issues"
+  },
+  "homepage": "https://github.com/DavidQuiRod/Proyecto_Selenium_VSCode_JavaScript#readme",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^139.0.1",
+    "selenium-webdriver": "^4.35.0"
+  }
+}
