@@ -1,8 +1,9 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
-
+const assert = require('assert');
 async function Scenario1() {
   let driver = await new Builder().forBrowser('chrome').build();
-     //Step 1 Open LambdaTest’s Selenium Playground from https://www.lambdatest.com/selenium-playground
+    try{
+    //Step 1 Open LambdaTest’s Selenium Playground from https://www.lambdatest.com/selenium-playground
     await driver.get('https://www.lambdatest.com/selenium-playground');
     await driver.manage().window().maximize();
     //Step2 Click “Simple Form Demo”.
@@ -26,13 +27,19 @@ async function Scenario1() {
     console.log('Se dio clik en el boton');
     //Step 7 Validate whether the same text message is displayed in the right-hand panel under the “Your Message:” section
     const messageFin=await driver.findElement(By.xpath('//*[@id="message"]')).getText();
+    console.log(assert.equal(messageFin,messageWelcome,'Revisar las cadenas de texto ya que no son iguales'))
+    /*
     console.log('Mensaje obtenido: '+ messageFin); 
     if(messageFin ==messageWelcome){
         console.log("Las dos cadenas de texto coinciden");
         await driver.close();
     } else{
         console.log("Revisar las cadenas de texto ya que no son iguales")
-    }
+    }*/
+   } finally 
+   {
+       await driver.quit();
+   }
 }
 
 Scenario1();
