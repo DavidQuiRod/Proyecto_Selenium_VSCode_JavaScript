@@ -7,8 +7,8 @@
  tasks:
          - name: Ejecutar primer script Selenium
            init: npm install  # Instala dependencias si es necesario
-           command: node Scenario1.js
+           command: node /test/Scenario1.js
          - name: Ejecutar Segundo script Selenium
-           command: node Scenario2.js
+           command: node /test/Scenario2.js
          - name: Ejecutar Tercer script Selenium
-           command: node Scenario3.js
+           command: node /test/Scenario3.js
