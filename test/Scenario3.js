@@ -1,7 +1,7 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const assert = require('assert');
 async function Scenario3() {
-    let driver = await new Builder().forBrowser('chrome').build();
+    let driver = new Builder().forBrowser('chrome').setChromeOptions('../drivers/chromedriver/chromedriver.exe').build();
     
     try{//Step 1 Open the https://www.lambdatest.com/selenium-playground page and click “Input Form Submit”.
     await driver.get('https://www.lambdatest.com/selenium-playground');
