@@ -23,6 +23,7 @@
     "selenium-webdriver": "^4.35.0"
   },
   "devDependencies": {
+    "jest": "^30.0.5",
     "safaridriver": "^1.0.0"
   }
 }
