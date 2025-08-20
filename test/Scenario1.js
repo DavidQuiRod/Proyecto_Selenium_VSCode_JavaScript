@@ -1,8 +1,10 @@
-const {Builder, By, Key, until} = require('selenium-webdriver');
+const {Builder, By, Key, until, WebDriver, Browser} = require('selenium-webdriver');
 const assert = require('assert');
+//const chrome= require('../drivers/chromedriver/chromedriver');
 async function Scenario1() {
     //let driver = await new Builder().forBrowser('chrome').build(); <-- Manera 1 de ejecutar chrome driver desde las librerias
     //let driver = new Builder().forBrowser('edge').setEdgeOptions('../drivers/edgedriver/msedgedriver.exe').build(); //<-- De esta forma podemos ejecutar el driver que le asignemos en la ruta
+    //let driver = new Builder().forBrowser('chrome').setChromeOptions('../drivers/chromedriver/chromedriver.exe').build(); //<-- De esta forma podemos ejecutar el driver que le asignemos en la ruta
     let driver = new Builder().forBrowser('chrome').setChromeOptions('../drivers/chromedriver/chromedriver.exe').build(); //<-- De esta forma podemos ejecutar el driver que le asignemos en la ruta
     await driver.get('https://www.lambdatest.com/selenium-playground');
     try{
